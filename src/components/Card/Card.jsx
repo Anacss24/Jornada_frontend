@@ -1,14 +1,30 @@
+import Tag from "../Tag/Tag";
 import "./Card.css"
 
 export default function Card(props) {
    const item =props.item;
 
-    return  <div className="card">
+     // Garantir que temos sempre um array em tags
+
+  // Jeito literal
+  // let tags = item.tags;
+
+  // if (!tags) {
+  //   tags = [];
+  // }
+
+  // Jeito otimizado
+   
+   const tags = item.tags || [];
+
+
+    return<div className="card">
        <h2>{item.nome}</h2>
        <div className="tags">
-          <div className="tag">Status: Vivo</div>
-          <div className="tag">Espécie: Humana</div>
-          <div className="tag">Origem: Terra C-137</div>
+         {tags.map(function(tag, index){
+            return <Tag text={tags} key={`card_tag_${index}`}/> 
+         })}
+        
         </div>
        <img src={item.imagemURL} alt="" />
        </div>
