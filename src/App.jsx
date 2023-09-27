@@ -8,9 +8,24 @@ function App() {
     imgagemURL: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
   }
 
+  const item2 = {
+    nome: 'Morty Smith',
+    imgagemURL: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
+  }
+
+  const item3 = {
+    nome: 'Summer Smith',
+    imgagemURL: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg'
+  }
+
+  const itens = [item1, item2, item3]
+
   return (
     <>
-     <Card item={item1} />    
+    {itens.map(function (item){
+      return <Card item={item}/>
+    })}
+
     </>
   )
 }
