@@ -43,9 +43,11 @@ async function carregarDadosApi(){
 
 }
 // useEffct recebe duas informações:
-// 1. Função contendo o efeito que será protegido pelo useEffect
-// 2. Dependências que controlam e executam do useEffect. Array vazio para executar apenas 1 vez
-useEffect(function (){
+// 1. Função contendo o código que será protegido pelo useEffect
+// 2. Dependências que controlam e executam do useEffect. 
+ //     Array vazio para executar apenas 1 vez
+useEffect(
+  function (){
   carregarDadosApi()
 }, [])
 

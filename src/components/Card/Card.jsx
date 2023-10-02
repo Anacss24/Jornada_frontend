@@ -19,13 +19,13 @@ export default function Card(props) {
 
 
     return<div className="card">
-       <h2>{item.nome}</h2>
+       <h2>{item.name}</h2>
        <div className="tags">
          {tags.map(function(tag, index){
             return <Tag text={tags} key={`card_tag_${index}`}/> 
          })}
         
         </div>
-       <img src={item.imagemURL} alt="" />
+       <img src={item.image} alt="" />
        </div>
  }
