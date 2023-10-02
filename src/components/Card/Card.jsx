@@ -15,7 +15,13 @@ export default function Card(props) {
 
   // Jeito otimizado
    
-   const tags = item.tags || [];
+   const tags = [
+   `Status: ${item.status} `
+   `Species: ${item.species} `
+   `Origin: ${item.origin} `
+
+
+   ]
 
 
     return<div className="card">
@@ -29,3 +35,4 @@ export default function Card(props) {
        <img src={item.image} alt="" />
        </div>
  }
+
