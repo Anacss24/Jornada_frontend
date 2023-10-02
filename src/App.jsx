@@ -56,10 +56,11 @@ useEffect(
 
   return (
     <>
+    <div className="card-list">
     {itens.map(function (item, index){
       return <Card item={item} key={`card_${index}`}/>
     })}
-
+    </div>
     </>
   )
 }
