@@ -51,7 +51,7 @@ useEffect(
   carregarDadosApi()
 }, [])
 
-carregarDadosApi();
+
 
 
   return (

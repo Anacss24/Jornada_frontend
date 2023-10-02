@@ -15,20 +15,19 @@ export default function Card(props) {
 
   // Jeito otimizado
    
-   const tags = [
-   `Status: ${item.status} `
-   `Species: ${item.species} `
-   `Origin: ${item.origin} `
+  const tags = [
+   `Status: ${item.status}`,
+   `Species: ${item.species}`,
+   `Origin: ${item.origin.name}`,
+ ]
 
 
-   ]
-
-
-    return<div className="card">
+    return <div className="card">
        <h2>{item.name}</h2>
+
        <div className="tags">
-         {tags.map(function(tag, index){
-            return <Tag text={tags} key={`card_tag_${index}`}/> 
+         {tags.map(function(tag, index){ // map transforma um array em outro array
+            return <Tag text={tag} key={`card_tag_${index}`}/> 
          })}
         
         </div>
