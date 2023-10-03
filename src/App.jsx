@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Card from './components/Card/Card'
 import { useEffect } from 'react'
+import Header from './components/Header/Header'
 
 function App() {
   // const item1 = {
@@ -56,6 +57,7 @@ useEffect(
 
   return (
     <>
+    <Header />
     <div className="card-list">
     {itens.map(function (item, index){
       return <Card item={item} key={`card_${index}`}/>
